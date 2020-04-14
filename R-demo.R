@@ -20,5 +20,20 @@ install.packages("ggplot2") # Install ggplot2 package (only need to do this once
 
 library(ggplot2) # Add the package to your active library (only active for the current R session)
 
+# A basic scatter plot
 ggplot(data = iris, aes(x = Sepal.Width, y = Sepal.Length)) +
   geom_point()
+
+# Add a regression line
+ggplot(data = iris, aes(x = Sepal.Width, y = Sepal.Length)) +
+  geom_point() +
+  geom_smooth()
+
+# Points color-coded by species
+ggplot(data = iris, aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
+  geom_point()
+
+# Seperate curves for each species
+ggplot(data = iris, aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
+  geom_point() +
+  geom_smooth()
