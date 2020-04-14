@@ -24,31 +24,65 @@ library(ggplot2) # Add the package to your active library (only active for the c
 ggplot(data = iris, aes(x = Sepal.Length)) +
   geom_histogram()
 
+
 # Color-code by species
 ggplot(data = iris, aes(x = Sepal.Length, fill = Species)) +
   geom_histogram()
+
 
 # Unstack bars by species
 ggplot(data = iris, aes(x = Sepal.Length, fill = Species)) +
   geom_histogram(position = "dodge")
 
+
+
+# Make use of the %>% (pipe) operator from the dplyr package
+install.packages("dplyr")
+library(dplyr)
+
+# Example:
+iris %>%
+  ggplot(aes(x = Sepal.Length)) +
+  geom_histogram()
+
+
+
 # A basic scatter plot
-ggplot(data = iris, aes(x = Sepal.Width, y = Sepal.Length)) +
+iris %>%
+  ggplot(aes(x = Sepal.Width, y = Sepal.Length)) +
   geom_point()
+
 
 # Add a regression line
-ggplot(data = iris, aes(x = Sepal.Width, y = Sepal.Length)) +
+iris %>%
+  ggplot(aes(x = Sepal.Width, y = Sepal.Length)) +
   geom_point() +
   geom_smooth()
+
 
 # Points color-coded by species
-ggplot(data = iris, aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
+iris %>%
+  ggplot(aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
   geom_point()
 
+
 # Seperate curves for each species
-ggplot(data = iris, aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
+iris %>%
+  ggplot(aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
   geom_point() +
   geom_smooth()
+
+
+# Simple boxplot
+iris %>%
+  ggplot(aes(Sepal.Length)) +
+  geom_boxplot()
+
+
+# By species
+iris %>%
+  ggplot(aes(Sepal.Length, color = Species)) +
+  geom_boxplot()
 
 
 
