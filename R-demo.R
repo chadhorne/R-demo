@@ -20,6 +20,18 @@ install.packages("ggplot2") # Install ggplot2 package (only need to do this once
 
 library(ggplot2) # Add the package to your active library (only active for the current R session)
 
+# A basic histogram
+ggplot(data = iris, aes(x = Sepal.Length)) +
+  geom_histogram()
+
+# Color-code by species
+ggplot(data = iris, aes(x = Sepal.Length, fill = Species)) +
+  geom_histogram()
+
+# Unstack bars by species
+ggplot(data = iris, aes(x = Sepal.Length, fill = Species)) +
+  geom_histogram(position = "dodge")
+
 # A basic scatter plot
 ggplot(data = iris, aes(x = Sepal.Width, y = Sepal.Length)) +
   geom_point()
@@ -37,3 +49,13 @@ ggplot(data = iris, aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
 ggplot(data = iris, aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
   geom_point() +
   geom_smooth()
+
+
+
+# Data Transformation----
+
+install.packages("dplyr") # The dplyr package is great for transforming data
+
+library(dplyr)
+
+
