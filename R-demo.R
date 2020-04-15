@@ -10,6 +10,8 @@ iris$Sepal.Length # Each column of a dataframe is a vector
 
 str(iris$Sepal.Length) # Vectors hold values of a single data type
 
+numbers <- c(1, 2, 3, 4) # Create a numeric vector
+
 summary(iris) # Statistical summary of iris data set
 
 
@@ -47,6 +49,8 @@ iris %>%
 
 
 
+# Scatter plot----
+
 # A basic scatter plot
 iris %>%
   ggplot(aes(x = Sepal.Width, y = Sepal.Length)) +
@@ -72,6 +76,9 @@ iris %>%
   geom_point() +
   geom_smooth()
 
+
+
+# Boxplot----
 
 # Simple boxplot
 iris %>%
