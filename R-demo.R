@@ -37,7 +37,6 @@ ggplot(data = iris, aes(x = Sepal.Length, fill = Species)) +
   geom_histogram(position = "dodge")
 
 
-
 # Make use of the %>% (pipe) operator from the dplyr package
 install.packages("dplyr")
 library(dplyr)
@@ -91,6 +90,17 @@ iris %>%
   ggplot(aes(Sepal.Length, color = Species)) +
   geom_boxplot()
 
+# Add species to Y axis
+iris %>%
+  ggplot(aes(Sepal.Length, Species, color = Species)) +
+  geom_boxplot()
+
+# Flip coordinates for readability
+iris %>%
+  ggplot(aes(Sepal.Length, Species, color = Species)) +
+  geom_boxplot() +
+  coord_flip()
+  
 
 
 # Data Transformation----
