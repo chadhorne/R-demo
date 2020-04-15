@@ -15,7 +15,7 @@ Next, clone this repo to your machine and open the `R-demo.R` file in RStudio.
 - [R for Data Science](https://r4ds.had.co.nz/)
   - This is an excellent resource for getting used to using R for different tasks. For some reason the page won't open on the Watco VPN though.
 - [Tidyverse](https://www.tidyverse.org/)
-  - There's a collection of packages called the `Tidyverse` that are used to promote [Tidy data](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html). They are a good place to learn all the things R can be used for and what good coding practice means in R.
+  - There's a collection of packages called the `Tidyverse` that are used to facilitate [Tidy data](https://tidyr.tidyverse.org/articles/tidy-data.html). They are a good place to learn all the things R can be used for and what good coding practice means in R.
 
 ## Data Visualization
 
@@ -25,3 +25,12 @@ Next, clone this repo to your machine and open the `R-demo.R` file in RStudio.
   - A nice visualization package for displaying location and geospatial data.
 - [Shiny](https://shiny.rstudio.com/)
   - A very powerful framework for developing dashboards in R. See [ShinyDashboard](https://rstudio.github.io/shinydashboard/) for an easy-to-use dashboard template.
+
+## Data Transformation
+
+- [dplyr](https://dplyr.tidyverse.org/)
+  - The most popular data transformation package in R.
+- [tidyr](https://tidyr.tidyverse.org/)
+  - A little more technical than `dplyr`, but very useful.
+- [purrr](https://purrr.tidyverse.org/)
+  - Enhances R's functional programming base. I haven't used this one as much as the others, but have heard good things about it.
