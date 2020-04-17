@@ -6,13 +6,29 @@ iris <- iris # Assign iris data set to the variable "iris"
 
 str(iris) # The iris data set is stored in a dataframe data structure
 
+summary(iris) # Statistical summary of iris data set
+
+
+
 iris$Sepal.Length # Each column of a dataframe is a vector
 
 str(iris$Sepal.Length) # Vectors hold values of a single data type
 
 numbers <- c(1, 2, 3, 4) # Create a numeric vector
 
-summary(iris) # Statistical summary of iris data set
+
+
+for(num in numbers) {
+  
+  print(num)
+}
+
+
+
+my_function <- function() {
+  
+  print(numbers)
+}
 
 
 
